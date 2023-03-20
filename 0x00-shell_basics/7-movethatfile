@@ -1,2 +1,2 @@
 #!/bin/bash
-mmdir -p tmp/my_first_directory && touch tmp/betty  /tmp/betty /tmp/my_first_directory/
+mkdir /tmp/betty /tmp/my_first_directory/
