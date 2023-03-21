@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $(( $(tr a-z A-Z <<< $WATER) + $(tr a-z A-Z <<< $STIR) )) | dc | tr A-Z bestchol | xargs -I % sh -c 'export BESTCHOL=%'
+
