@@ -1,3 +1,2 @@
 #!/bin/bash
-echo $(( $(tr a-z A-Z <<< $WATER) + $(tr a-z A-Z <<< $STIR) )) | dc | tr A-Z bestchol | xargs -I % sh -c 'export BESTCHOL=%'
-
+printf -v BESTCHOL '%s' $(printf '%s+%s\n' $(tr a-z A-Z <<< $WATER) $(tr a-z A-Z <<< $STIR) | dc | awk '{printf("%s\n",toupper($0))}') && export BESTCHOL
